@@ -22,6 +22,13 @@ CREATE TABLE `testimonial`
   date VARCHAR(10)
 );
 
+CREATE TABLE `project`
+(
+  name VARCHAR(50) PRIMARY KEY NOT NULL,
+  text TEXT,
+  tech TEXT
+);
+
 INSERT INTO `page` (id, title, summary, content)
     VALUES ('index', 'This is the title', 'This is the summary', 'This is the content');
 
@@ -36,4 +43,11 @@ VALUES ('soi', 'I haven\'t had the opportunity to work with Antonio since we fin
 Antonio\'s technical skills are in no dispute. He has good technical base knowledge and is quick to pick up new concepts and skills.He has an infectious enthusiasm for trying new tools and technologies. This is backed up with strong understanding of both scrum and development best-practice concepts and methods.
 He has a great ability to see the bigger picture in development work, which means he applies his knowledge in sensible and pragmatic ways, and is always helpful in creating and maintaining effective working environments and practices.
 Antonio\'s ability to connect with other people is the thing that really multiplies his value. He is always willing to take time to share his knowledge, and bring others along on his journey. He never works as a "lone ranger" developer and takes care of the overall balance and dynamic of the team, unlocking potential from all his teammates.
-I look forward to seeing Antonio rise through the levels rapidly and have a very successful career at ANDigital.', '04-12-2015');
+I look forward to seeing Antonio rise through the levels rapidly and have a very successful career at ANDigital.', '04-12-2015'),
+  ('kate','Antonio is a confident developer who has a passion for experimenting and finding new ways to do things. I always feel like I have a lot to learn from him, which I have been doing while working together on Pulse. His passion for technology reflects on his attitude to work, which is proactive, productive, and professional.','07-12-2015'),
+  ('munveer','Antonio is a very hardworking individual who is knowledgable in both back-end and front-end technologies, I have experienced this whilst working with Antonio on the front-end of Pulse. He is approachable and always happy to help those who are less experienced like myself.','07-12-2015'),
+  ('rachelle','Antonio contributes to the team and is always finding better ways of writing lines of code to make the work readable and efficient. He is happy to help when help is needed even when he has work of his own or is not entirely familiar with the language for example, PHP. Antonio definitely knows his technology and Is able to contribute towards very technical decisions. Overall, it has been great working with Antonio so far.','07-12-2015');
+
+INSERT INTO `project` (name, text, tech)
+    VALUES ('TravisPerkins','At Travis Perkins I had the opportunity to expand my knowledge around Middleware systems and their integration within an Enterprise company. Despite being \'just\' a PoC project, it was quite successful also from the very own words of our Product Owner. I worked in a small team that presented its own challenges when it came to technical as well as interpersonal aspects. I supported the Product Owner advising him around the most relevant features of the products, and presenting him potential issues. I contributed with innovative ideas to the success of the project, along with other squad members working as a team.','WSO2 Products (Enterprise Service Bus, Business Activity Monitor, Message Broker), Wiremock as Java testing library, Amazon Web Services, Jenkins, Docker'),
+      ('Pulse','As a developer for Pulse internal project I had the opportunity to work with a junior medium size team (that for the most diverse reasons is now smaller than it was) mainly on the backend (APIs) of the system, helping the team whenever front-end support was needed. I worked closely with Mahesh on the design of the solution, discussing with him about the implementation choices and bringing together the team on this journey. As one of the most senior devs in this team I\'m also having the opportunity of coaching other members of my team and I\'m trying to be a good mentor for them. Given the positive feedbacks I\'ve received I would say that this approach is working pretty well, and I\'m enjoying this position, despite I\'m also willing to work closer to more senior developers like Mahesh and Paul.','Java 8, Spring (spring-boot, spring-data, spring-test), DBUnit, Rest APIs, AngularJS, Javascript');
